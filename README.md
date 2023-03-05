@@ -1,4 +1,4 @@
-## How to run the application ##
+## How to run the application
 - Ensure you have Docker
 - Ensure you have `php > 8.1`, `ext-url`, `unzip`
 - Clone the repository
