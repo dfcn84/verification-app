@@ -16,7 +16,7 @@
 
 ## API documentation
 
-**URL:** `/verify`
+**URL:** `/verify` (logged in user only)
 
 **Method:** `POST`
 
