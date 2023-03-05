@@ -16,3 +16,6 @@
 
 ## API documentation
 https://docs.google.com/document/d/1ulwuCODbldf5Am-qm1TyoA-401iyBfLQkDwsseDOFD8/edit?usp=sharing
+
+## Tech design considerations
+https://docs.google.com/document/d/1WhxCszGPvEWGVTa0mzFNSCj74nmw9yQZVNLbYB_3PTg/edit?usp=sharing
