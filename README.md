@@ -1,4 +1,4 @@
-#How to run the application
+## How to run the application ##
 - Ensure you have Docker
 - Ensure you have `php > 8.1`, `ext-url`, `unzip`
 - Clone the repository
@@ -10,5 +10,6 @@
 - run `./vendor/bin/sail php artisan migrate`
 - run `./vendor/bin/sail npm i`
 - run `./vendor/bin/sail npm run build`
-- go to http://localhost/register and register a new account
+- go to http://localhost/register and register a new account with an email & password
+- you will be brought to the dashboard, or if your session has ended go to http://localhost/login with the email/password you registered previously.
 - drag a valid JSON into the drop zone to verify
