@@ -91,4 +91,8 @@
 			}
 			```
 ## Tech design considerations
-https://docs.google.com/document/d/1WhxCszGPvEWGVTa0mzFNSCj74nmw9yQZVNLbYB_3PTg/edit?usp=sharing
+- Used Laravel Breeze UI to cover the authentication part since it is not the main component of this assessment.
+- Broken down the classes into the various smaller files based on their actions (eg doing the actual verification, storing result to DB,etc) to reduce bloat and achieve single responsibility as much as possible
+- Verification result types are stored as a enum so we can extend if in the future
+- Each verification criteria is separated into its own functions to allow scaling
+
