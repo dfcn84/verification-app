@@ -17,6 +17,7 @@
 ## API documentation
 
 **URL:** `/verify`
+
 **Method:** `POST`
 
 **Headers:**
