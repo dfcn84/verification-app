@@ -6,7 +6,7 @@
 - run `cp .env.example .env`
 - run `composer upgrade`
 - run `php artisan key:generate`
-- run `./vendor/bin/sail up`
+- run `./vendor/bin/sail up` (ensure Docker is running)
 - run `./vendor/bin/sail php artisan migrate`
 - run `./vendor/bin/sail npm i`
 - run `./vendor/bin/sail npm run build`
