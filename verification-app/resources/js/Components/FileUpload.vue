@@ -6,9 +6,11 @@ const state = reactive({
   files: [],
 });
 
+const result = reactive({
+  data: {},
+});
+
 const onDrop = (acceptFiles, rejectReasons) => {
-  console.log("acceptFiles", acceptFiles);
-  console.log("rejectReasons", rejectReasons);
   state.files = acceptFiles;
 };
 
@@ -23,21 +25,20 @@ const { getRootProps, getInputProps, isDragActive, ...rest } = useDropzone({
 });
 
 watch(state, () => {
-  console.log('state', state);
   if (state.files.length > 0) {
-    console.log('DO UPLOAD');
     const formData = new FormData(); // pass data as a form
     state.files.map(file => {
         formData.append("uploadedFile", file);
     });
-    console.log(formData)
     axios
         .post('/api/verify', formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
         })
-        .then(response => console.log(response))
+        .then(response => {
+            result.data = response.data;
+        })
         .catch(error => console.log(error));
     }
 });
@@ -109,6 +110,10 @@ watch(isDragActive, () => {
             >Delete</span
           >
         </div>
+        <div v-if="result.data" >
+          <p v-if="result.data.issuer_name">Issuer: {{result.data.issuer_name}}</p>
+          <p v-if="result.data.result">Result: {{result.data.result}}</p>
+        </div>        
       </div>
       <div v-else class="dropzone" v-bind="getRootProps()">
         <div
