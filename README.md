@@ -13,3 +13,6 @@
 - go to http://localhost/register and register a new account with an email & password
 - you will be brought to the dashboard, or if your session has ended go to http://localhost/login with the email/password you registered previously.
 - drag a valid JSON into the drop zone to verify
+
+## API documentation
+https://docs.google.com/document/d/1ulwuCODbldf5Am-qm1TyoA-401iyBfLQkDwsseDOFD8/edit?usp=sharing
